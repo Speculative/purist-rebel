@@ -10,5 +10,6 @@
 <style>
   div {
     color: black;
+    overflow: hidden;
   }
 </style>

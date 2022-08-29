@@ -2,7 +2,7 @@
   import Title from "./lib/Title.svelte";
   import Chart from "./lib/Chart.svelte";
 
-  let subject = "Something";
+  let subject = "something";
 </script>
 
 <main>

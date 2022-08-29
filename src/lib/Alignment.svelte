@@ -20,9 +20,9 @@
       {hAxis} {hAlign}, {vAxis} {vAlign}
     {/if}
   </h3>
-  <img src="" />
+  <div class="wrap" contenteditable="true" />
   <p>
-    &ldquo;<Editable text="Something" /> is a {subject}&rdquo;
+    &ldquo;<Editable text="Something" /> is a {subject}.&rdquo;
   </p>
 </section>
 
@@ -30,10 +30,11 @@
   section {
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
 
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .vPurist.hPurist {
@@ -64,17 +65,26 @@
     font-size: 1.5rem;
     text-align: center;
     color: white;
-    text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.5);
+    text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.7);
   }
 
-  img {
-    flex-grow: 1;
+  .wrap {
+    flex: 1 1 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  :global(.wrap img) {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   p {
     font-size: 1.2rem;
     text-align: center;
     color: white;
-    text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.5);
+    text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.7);
   }
 </style>

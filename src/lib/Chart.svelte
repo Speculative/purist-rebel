@@ -56,5 +56,7 @@
 
     column-gap: 0;
     row-gap: 0;
+
+    overflow: hidden;
   }
 </style>
